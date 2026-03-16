@@ -324,27 +324,28 @@ namespace AvaloniaEdit
         //        }
         //    }
         //}
-
-        private bool _requireControlModifierForHyperlinkClick = true;
+        /// #remake
+        //private bool _requireControlModifierForHyperlinkClick = true;
 
         /// <summary>
         /// Gets/Sets whether the user needs to press Control to click hyperlinks.
         /// The default value is true.
         /// </summary>
         /// <remarks>The default value is <c>true</c>.</remarks>
-        [DefaultValue(true)]
-        public virtual bool RequireControlModifierForHyperlinkClick
-        {
-            get { return _requireControlModifierForHyperlinkClick; }
-            set
-            {
-                if (_requireControlModifierForHyperlinkClick != value)
-                {
-                    _requireControlModifierForHyperlinkClick = value;
-                    OnPropertyChanged(nameof(RequireControlModifierForHyperlinkClick));
-                }
-            }
-        }
+        /// #remake
+        //[DefaultValue(true)]
+        //public virtual bool RequireControlModifierForHyperlinkClick
+        //{
+        //    get { return _requireControlModifierForHyperlinkClick; }
+        //    set
+        //    {
+        //        if (_requireControlModifierForHyperlinkClick != value)
+        //        {
+        //            _requireControlModifierForHyperlinkClick = value;
+        //            OnPropertyChanged(nameof(RequireControlModifierForHyperlinkClick));
+        //        }
+        //    }
+        //}
         #endregion
 
         #region TabSize / IndentationSize / ConvertTabsToSpaces / GetIndentationString

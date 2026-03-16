@@ -6,10 +6,10 @@
       <StaticResource x:Key="SearchPanelFontFamily" ResourceKey="ContentControlThemeFontFamily" />
       <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
-          <StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ThemeBackgroundBrush" />
+          <!--<StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ThemeBackgroundBrush" />
           <StaticResource x:Key="CompletionToolTipForeground" ResourceKey="ThemeForegroundColor" />
           <StaticResource x:Key="CompletionToolTipBorderBrush" ResourceKey="ThemeBorderMidBrush" />
-          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ThemeBorderThickness" />
+          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ThemeBorderThickness" />-->
           <StaticResource x:Key="OverloadViewerBackground" ResourceKey="ThemeBackgroundBrush" />
           <StaticResource x:Key="OverloadViewerForeground" ResourceKey="ThemeForegroundColor" />
           <StaticResource x:Key="OverloadViewerBorderBrush" ResourceKey="ThemeBorderMidBrush" />
@@ -18,10 +18,10 @@
           <SolidColorBrush x:Key="TextAreaSelectionBrush" Color="{DynamicResource HighlightColor}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="Dark">
-          <StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ThemeBackgroundBrush" />
+          <!--<StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ThemeBackgroundBrush" />
           <StaticResource x:Key="CompletionToolTipForeground" ResourceKey="ThemeForegroundColor" />
           <StaticResource x:Key="CompletionToolTipBorderBrush" ResourceKey="ThemeBorderMidBrush" />
-          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ThemeBorderThickness" />
+          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ThemeBorderThickness" />-->
           <StaticResource x:Key="OverloadViewerBackground" ResourceKey="ThemeBackgroundBrush" />
           <StaticResource x:Key="OverloadViewerForeground" ResourceKey="ThemeForegroundColor" />
           <StaticResource x:Key="OverloadViewerBorderBrush" ResourceKey="ThemeBorderMidBrush" />

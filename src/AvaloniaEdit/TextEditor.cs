@@ -24,7 +24,7 @@ using System.Text;
 using Avalonia;
 using AvaloniaEdit.Document;
 using AvaloniaEdit.Editing;
-using AvaloniaEdit.Highlighting;
+//using AvaloniaEdit.Highlighting;
 using AvaloniaEdit.Rendering;
 using AvaloniaEdit.Utils;
 using Avalonia.Controls;
@@ -396,12 +396,13 @@ namespace AvaloniaEdit
         /// Allows derived classes to provide custom colorizer implementations for special highlighting definitions.
         /// </summary>
         /// <returns></returns>
-        protected virtual IVisualLineTransformer CreateColorizer(IHighlightingDefinition highlightingDefinition)
-        {
-            if (highlightingDefinition == null)
-                throw new ArgumentNullException(nameof(highlightingDefinition));
-            return new HighlightingColorizer(highlightingDefinition);
-        }
+        /// #hardremake
+        //protected virtual IVisualLineTransformer CreateColorizer(IHighlightingDefinition highlightingDefinition)
+        //{
+        //    if (highlightingDefinition == null)
+        //        throw new ArgumentNullException(nameof(highlightingDefinition));
+        //    return new HighlightingColorizer(highlightingDefinition);
+        //}
         #endregion
 
         #region WordWrap

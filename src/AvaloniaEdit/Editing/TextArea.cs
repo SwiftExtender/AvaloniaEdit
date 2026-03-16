@@ -98,8 +98,8 @@ namespace AvaloniaEdit.Editing
             _selection = EmptySelection = new EmptySelection(this);
 
             textView.Services.AddService(this);
-
-            textView.LineTransformers.Add(new SelectionColorizer(this));
+            //#remake
+            //textView.LineTransformers.Add(new SelectionColorizer(this));
             textView.InsertLayer(new SelectionLayer(this), KnownLayer.Selection, LayerInsertionPosition.Replace);
 
             Caret = new Caret(this);

@@ -567,32 +567,35 @@ namespace AvaloniaEdit.Rendering
         /// <summary>
         /// LinkTextForegroundBrush dependency property.
         /// </summary>
-        public static readonly StyledProperty<IBrush> LinkTextForegroundBrushProperty =
-            AvaloniaProperty.Register<TextView, IBrush>("LinkTextForegroundBrush", Brushes.Blue);
+        //public static readonly StyledProperty<IBrush> LinkTextForegroundBrushProperty =
+        //    AvaloniaProperty.Register<TextView, IBrush>("LinkTextForegroundBrush", Brushes.Blue);
 
         /// <summary>
         /// Gets/sets the Brush used for displaying link texts.
         /// </summary>
-        public IBrush LinkTextForegroundBrush
-        {
-            get => GetValue(LinkTextForegroundBrushProperty);
-            set => SetValue(LinkTextForegroundBrushProperty, value);
-        }
+        /// #remake
+        //public IBrush LinkTextForegroundBrush
+        //{
+        //    get => GetValue(LinkTextForegroundBrushProperty);
+        //    set => SetValue(LinkTextForegroundBrushProperty, value);
+        //}
 
         /// <summary>
         /// LinkTextBackgroundBrush dependency property.
         /// </summary>
-        public static readonly StyledProperty<IBrush> LinkTextBackgroundBrushProperty =
-            AvaloniaProperty.Register<TextView, IBrush>("LinkTextBackgroundBrush", Brushes.Transparent);
+        /// #remake
+        //public static readonly StyledProperty<IBrush> LinkTextBackgroundBrushProperty =
+        //    AvaloniaProperty.Register<TextView, IBrush>("LinkTextBackgroundBrush", Brushes.Transparent);
 
         /// <summary>
         /// Gets/sets the Brush used for the background of link texts.
         /// </summary>
-        public IBrush LinkTextBackgroundBrush
-        {
-            get => GetValue(LinkTextBackgroundBrushProperty);
-            set => SetValue(LinkTextBackgroundBrushProperty, value);
-        }
+        /// #remake
+        //public IBrush LinkTextBackgroundBrush
+        //{
+        //    get => GetValue(LinkTextBackgroundBrushProperty);
+        //    set => SetValue(LinkTextBackgroundBrushProperty, value);
+        //}
         #endregion
 
         /// <summary>
@@ -1931,9 +1934,9 @@ namespace AvaloniaEdit.Rendering
             base.OnPropertyChanged(change);
 
             if (change.Property == TemplatedControl.ForegroundProperty
-                     || change.Property == NonPrintableCharacterBrushProperty
-                     || change.Property == LinkTextBackgroundBrushProperty
-                     || change.Property == LinkTextForegroundBrushProperty)
+                     || change.Property == NonPrintableCharacterBrushProperty)
+                     //|| change.Property == LinkTextBackgroundBrushProperty
+                     //|| change.Property == LinkTextForegroundBrushProperty)
                     // || change.Property == LinkTextUnderlineProperty)/// #remake
             {
                 // changing brushes requires recreating the cached elements

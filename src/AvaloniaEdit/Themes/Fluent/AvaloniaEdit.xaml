@@ -6,10 +6,10 @@
       <StaticResource x:Key="SearchPanelFontFamily" ResourceKey="ContentControlThemeFontFamily" />
       <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
-          <StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ToolTipBackground" />
+          <!--<StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ToolTipBackground" />
           <StaticResource x:Key="CompletionToolTipForeground" ResourceKey="ToolTipForeground" />
           <StaticResource x:Key="CompletionToolTipBorderBrush" ResourceKey="ToolTipBorderBrush" />
-          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ToolTipBorderThemeThickness" />
+          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ToolTipBorderThemeThickness" />-->
           <StaticResource x:Key="OverloadViewerBackground" ResourceKey="ToolTipBackground" />
           <StaticResource x:Key="OverloadViewerForeground" ResourceKey="ToolTipForeground" />
           <StaticResource x:Key="OverloadViewerBorderBrush" ResourceKey="ToolTipBorderBrush" />
@@ -18,10 +18,10 @@
           <SolidColorBrush x:Key="TextAreaSelectionBrush" Color="{DynamicResource SystemAccentColor}" />
         </ResourceDictionary>
         <ResourceDictionary x:Key="Dark">
-          <StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ToolTipBackground" />
+          <!--<StaticResource x:Key="CompletionToolTipBackground" ResourceKey="ToolTipBackground" />
           <StaticResource x:Key="CompletionToolTipForeground" ResourceKey="ToolTipForeground" />
           <StaticResource x:Key="CompletionToolTipBorderBrush" ResourceKey="ToolTipBorderBrush" />
-          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ToolTipBorderThemeThickness" />
+          <StaticResource x:Key="CompletionToolTipBorderThickness" ResourceKey="ToolTipBorderThemeThickness" />-->
           <StaticResource x:Key="OverloadViewerBackground" ResourceKey="ToolTipBackground" />
           <StaticResource x:Key="OverloadViewerForeground" ResourceKey="ToolTipForeground" />
           <StaticResource x:Key="OverloadViewerBorderBrush" ResourceKey="ToolTipBorderBrush" />
