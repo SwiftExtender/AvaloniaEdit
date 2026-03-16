@@ -72,9 +72,9 @@ namespace AvaloniaEdit.Rendering
 		{
 			this.TextRunProperties.SetForegroundBrush(context.TextView.LinkTextForegroundBrush);
 			this.TextRunProperties.SetBackgroundBrush(context.TextView.LinkTextBackgroundBrush);
-			if (context.TextView.LinkTextUnderline)
-				this.TextRunProperties.SetTextDecorations(TextDecorations.Underline);
-			return base.CreateTextRun(startVisualColumn, context);
+            //if (context.TextView.LinkTextUnderline)
+            //	this.TextRunProperties.SetTextDecorations(TextDecorations.Underline);/// #remake
+            return base.CreateTextRun(startVisualColumn, context);
 		}
 
         /// <summary>

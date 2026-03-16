@@ -54,7 +54,7 @@ namespace AvaloniaEdit
 
             OptionsProperty.Changed.Subscribe(OnOptionsChanged);
             DocumentProperty.Changed.Subscribe(OnDocumentChanged);
-            SyntaxHighlightingProperty.Changed.Subscribe(OnSyntaxHighlightingChanged);
+            //SyntaxHighlightingProperty.Changed.Subscribe(OnSyntaxHighlightingChanged);
             IsReadOnlyProperty.Changed.Subscribe(OnIsReadOnlyChanged);
             IsModifiedProperty.Changed.Subscribe(OnIsModifiedChanged);
             ShowLineNumbersProperty.Changed.Subscribe(OnShowLineNumbersChanged);
@@ -352,43 +352,44 @@ namespace AvaloniaEdit
         /// <summary>
         /// The <see cref="SyntaxHighlighting"/> property.
         /// </summary>
-        public static readonly StyledProperty<IHighlightingDefinition> SyntaxHighlightingProperty =
-            AvaloniaProperty.Register<TextEditor, IHighlightingDefinition>("SyntaxHighlighting");
+        //public static readonly StyledProperty<IHighlightingDefinition> SyntaxHighlightingProperty =
+        //    AvaloniaProperty.Register<TextEditor, IHighlightingDefinition>("SyntaxHighlighting");
 
 
         /// <summary>
         /// Gets/sets the syntax highlighting definition used to colorize the text.
         /// </summary>
-        public IHighlightingDefinition SyntaxHighlighting
-        {
-            get => GetValue(SyntaxHighlightingProperty);
-            set => SetValue(SyntaxHighlightingProperty, value);
-        }
+        /// #remake
+        //public IHighlightingDefinition SyntaxHighlighting
+        //{
+        //    get => GetValue(SyntaxHighlightingProperty);
+        //    set => SetValue(SyntaxHighlightingProperty, value);
+        //}
 
-        private IVisualLineTransformer _colorizer;
+        //private IVisualLineTransformer _colorizer;
+        //#remake
+        //private static void OnSyntaxHighlightingChanged(AvaloniaPropertyChangedEventArgs e)
+        //{
+        //    (e.Sender as TextEditor)?.OnSyntaxHighlightingChanged(e.NewValue as IHighlightingDefinition);
+        //}
+        //#remake
+        //private void OnSyntaxHighlightingChanged(IHighlightingDefinition newValue)
+        //{
+        //    if (_colorizer != null)
+        //    {
+        //        textArea.TextView.LineTransformers.Remove(_colorizer);
+        //        _colorizer = null;
+        //    }
 
-        private static void OnSyntaxHighlightingChanged(AvaloniaPropertyChangedEventArgs e)
-        {
-            (e.Sender as TextEditor)?.OnSyntaxHighlightingChanged(e.NewValue as IHighlightingDefinition);
-        }
-
-        private void OnSyntaxHighlightingChanged(IHighlightingDefinition newValue)
-        {
-            if (_colorizer != null)
-            {
-                textArea.TextView.LineTransformers.Remove(_colorizer);
-                _colorizer = null;
-            }
-
-            if (newValue != null)
-            {
-                _colorizer = CreateColorizer(newValue);
-                if (_colorizer != null)
-                {
-                    textArea.TextView.LineTransformers.Insert(0, _colorizer);
-                }
-            }
-        }
+        //    if (newValue != null)
+        //    {
+        //        _colorizer = CreateColorizer(newValue);
+        //        if (_colorizer != null)
+        //        {
+        //            textArea.TextView.LineTransformers.Insert(0, _colorizer);
+        //        }
+        //    }
+        //}
 
         /// <summary>
         /// Creates the highlighting colorizer for the specified highlighting definition.

@@ -284,32 +284,35 @@ namespace AvaloniaEdit.Highlighting
         ///// <summary>
         ///// Produces HTML code for the line, with &lt;span class="colorName"&gt; tags.
         ///// </summary>
-        public string ToHtml(HtmlOptions options = null)
-        {
-        	StringWriter stringWriter = new StringWriter(CultureInfo.InvariantCulture);
-        	using (var htmlWriter = new HtmlRichTextWriter(stringWriter, options)) {
-        		WriteTo(htmlWriter);
-        	}
-        	return stringWriter.ToString();
-        }
+        ///#remake
+        //public string ToHtml(HtmlOptions options = null)
+        //{
+        //	StringWriter stringWriter = new StringWriter(CultureInfo.InvariantCulture);
+        //	using (var htmlWriter = new HtmlRichTextWriter(stringWriter, options)) {
+        //		WriteTo(htmlWriter);
+        //	}
+        //	return stringWriter.ToString();
+        //}
 
         /// <summary>
         /// Produces HTML code for a section of the line, with &lt;span class="colorName"&gt; tags.
         /// </summary>
-        public string ToHtml(int startOffset, int endOffset, HtmlOptions options = null)
-        {
-        	StringWriter stringWriter = new StringWriter(CultureInfo.InvariantCulture);
-        	using (var htmlWriter = new HtmlRichTextWriter(stringWriter, options)) {
-        		WriteTo(htmlWriter, startOffset, endOffset);
-        	}
-        	return stringWriter.ToString();
-        }
+        /// #remake
+        //public string ToHtml(int startOffset, int endOffset, HtmlOptions options = null)
+        //{
+        //	StringWriter stringWriter = new StringWriter(CultureInfo.InvariantCulture);
+        //	using (var htmlWriter = new HtmlRichTextWriter(stringWriter, options)) {
+        //		WriteTo(htmlWriter, startOffset, endOffset);
+        //	}
+        //	return stringWriter.ToString();
+        //}
 
         ///// <inheritdoc/>
-        public override string ToString()
-        {
-        	return "[" + GetType().Name + " " + ToHtml() + "]";
-        }
+        ///#remake
+        //public override string ToString()
+        //{
+        //	return "[" + GetType().Name + " " + ToHtml() + "]";
+        //}
         #endregion
 
         /// <summary>

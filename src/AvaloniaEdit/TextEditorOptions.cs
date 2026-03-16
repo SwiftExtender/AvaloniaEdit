@@ -20,7 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using AvaloniaEdit.CodeCompletion;
+//using AvaloniaEdit.CodeCompletion;/// #remake
 
 namespace AvaloniaEdit
 {
@@ -285,45 +285,45 @@ namespace AvaloniaEdit
 
         #region EnableHyperlinks
 
-        private bool _enableHyperlinks = true;
+        //private bool _enableHyperlinks = true;
+        /// #remake
+        ///// <summary>
+        ///// Gets/Sets whether to enable clickable hyperlinks in the editor.
+        ///// </summary>
+        ///// <remarks>The default value is <c>true</c>.</remarks>
+        //[DefaultValue(true)]
+        //public virtual bool EnableHyperlinks
+        //{
+        //    get { return _enableHyperlinks; }
+        //    set
+        //    {
+        //        if (_enableHyperlinks != value)
+        //        {
+        //            _enableHyperlinks = value;
+        //            OnPropertyChanged(nameof(EnableHyperlinks));
+        //        }
+        //    }
+        //}
 
-        /// <summary>
-        /// Gets/Sets whether to enable clickable hyperlinks in the editor.
-        /// </summary>
-        /// <remarks>The default value is <c>true</c>.</remarks>
-        [DefaultValue(true)]
-        public virtual bool EnableHyperlinks
-        {
-            get { return _enableHyperlinks; }
-            set
-            {
-                if (_enableHyperlinks != value)
-                {
-                    _enableHyperlinks = value;
-                    OnPropertyChanged(nameof(EnableHyperlinks));
-                }
-            }
-        }
-
-        private bool _enableEmailHyperlinks = true;
+        //private bool _enableEmailHyperlinks = true;
 
         /// <summary>
         /// Gets/Sets whether to enable clickable hyperlinks for e-mail addresses in the editor.
         /// </summary>
         /// <remarks>The default value is <c>true</c>.</remarks>
-        [DefaultValue(true)]
-        public virtual bool EnableEmailHyperlinks
-        {
-            get { return _enableEmailHyperlinks; }
-            set
-            {
-                if (_enableEmailHyperlinks != value)
-                {
-                    _enableEmailHyperlinks = value;
-                    OnPropertyChanged(nameof(EnableEmailHyperlinks));
-                }
-            }
-        }
+        //[DefaultValue(true)]
+        //public virtual bool EnableEmailHyperlinks
+        //{
+        //    get { return _enableEmailHyperlinks; }
+        //    set
+        //    {
+        //        if (_enableEmailHyperlinks != value)
+        //        {
+        //            _enableEmailHyperlinks = value;
+        //            OnPropertyChanged(nameof(EnableEmailHyperlinks));
+        //        }
+        //    }
+        //}
 
         private bool _requireControlModifierForHyperlinkClick = true;
 
@@ -700,8 +700,8 @@ namespace AvaloniaEdit
                 }
             }
         }
-
-        private CompletionAcceptAction _completionAcceptAction = CompletionAcceptAction.PointerPressed;
+        /// #remake
+        /*private CompletionAcceptAction _completionAcceptAction = CompletionAcceptAction.PointerPressed;
 
         /// <summary>
         /// Gets/Sets the pointer action used to request the insertion of a completion item.
@@ -718,7 +718,7 @@ namespace AvaloniaEdit
                     OnPropertyChanged(nameof(CompletionAcceptAction));
                 }
             }
-        }
+        }*/
 
         // The default LineHeightFactor matches the line height in the Visual Studio text editor.
         private const double DefaultLineHeightFactor = 1.16;

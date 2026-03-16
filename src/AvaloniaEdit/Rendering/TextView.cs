@@ -287,9 +287,9 @@ namespace AvaloniaEdit.Rendering
         #region Builtin ElementGenerators
         //		NewLineElementGenerator newLineElementGenerator;
         private SingleCharacterElementGenerator _singleCharacterElementGenerator;
-
-        private LinkElementGenerator _linkElementGenerator;
-        private MailLinkElementGenerator _mailLinkElementGenerator;
+        /// #remake
+        //private LinkElementGenerator _linkElementGenerator;
+        //private MailLinkElementGenerator _mailLinkElementGenerator;
 
         private void UpdateBuiltinElementGeneratorsFromOptions()
         {
@@ -297,8 +297,9 @@ namespace AvaloniaEdit.Rendering
 
             //			AddRemoveDefaultElementGeneratorOnDemand(ref newLineElementGenerator, options.ShowEndOfLine);
             AddRemoveDefaultElementGeneratorOnDemand(ref _singleCharacterElementGenerator, options.ShowBoxForControlCharacters || options.ShowSpaces || options.ShowTabs);
-            AddRemoveDefaultElementGeneratorOnDemand(ref _linkElementGenerator, options.EnableHyperlinks);
-            AddRemoveDefaultElementGeneratorOnDemand(ref _mailLinkElementGenerator, options.EnableEmailHyperlinks);
+            /// #remake
+            //AddRemoveDefaultElementGeneratorOnDemand(ref _linkElementGenerator, options.EnableHyperlinks);
+            //AddRemoveDefaultElementGeneratorOnDemand(ref _mailLinkElementGenerator, options.EnableEmailHyperlinks);
         }
 
         private void AddRemoveDefaultElementGeneratorOnDemand<T>(ref T generator, bool demand)
@@ -597,8 +598,9 @@ namespace AvaloniaEdit.Rendering
         /// <summary>
         /// LinkTextUnderlinedBrush dependency property.
         /// </summary>
-        public static readonly StyledProperty<bool> LinkTextUnderlineProperty =
-            AvaloniaProperty.Register<TextView, bool>(nameof(LinkTextUnderline), true);
+        /// //#remake
+        //public static readonly StyledProperty<bool> LinkTextUnderlineProperty =
+        //    AvaloniaProperty.Register<TextView, bool>(nameof(LinkTextUnderline), true);
 
         /// <summary>
         /// Gets/sets whether to underline link texts.
@@ -607,11 +609,12 @@ namespace AvaloniaEdit.Rendering
         /// Note that when setting this property to false, link text remains clickable and the LinkTextForegroundBrush (if any) is still applied.
         /// Set TextEditorOptions.EnableHyperlinks and EnableEmailHyperlinks to false to disable links completely.
         /// </remarks>
-        public bool LinkTextUnderline
-        {
-            get => GetValue(LinkTextUnderlineProperty);
-            set => SetValue(LinkTextUnderlineProperty, value);
-        }
+        /// #remake
+        //public bool LinkTextUnderline
+        //{
+        //    get => GetValue(LinkTextUnderlineProperty);
+        //    set => SetValue(LinkTextUnderlineProperty, value);
+        //}
 
         #region Redraw methods / VisualLine invalidation
         /// <summary>
@@ -1930,8 +1933,8 @@ namespace AvaloniaEdit.Rendering
             if (change.Property == TemplatedControl.ForegroundProperty
                      || change.Property == NonPrintableCharacterBrushProperty
                      || change.Property == LinkTextBackgroundBrushProperty
-                     || change.Property == LinkTextForegroundBrushProperty
-                     || change.Property == LinkTextUnderlineProperty)
+                     || change.Property == LinkTextForegroundBrushProperty)
+                    // || change.Property == LinkTextUnderlineProperty)/// #remake
             {
                 // changing brushes requires recreating the cached elements
                 RecreateCachedElements();
